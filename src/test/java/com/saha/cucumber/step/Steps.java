@@ -55,7 +55,7 @@ public class Steps {
                 overridden.setCapability(APPIUM_APP_ACTIVITY, "YOUR_APP_ACTIVITY");
                 overridden.setCapability(APPIUM_AUTO_GRANT_PERMISSIONS, true);
                 overridden.setCapability(APPIUM_NEW_COMMAND_TIMEOUT, 60000);
-                hubUrl = new URL("http://192.168.1.89:4723/");
+                hubUrl = new URL("http://127.0.0.1:4723/");
                 driver = new TestiniumAndroidDriver(hubUrl,overridden);
 
                 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -68,7 +68,7 @@ public class Steps {
             }
             else {
                 System.out.println("IOS");
-                hubUrl = new URL("http://192.168.1.89:4723/");
+                hubUrl = new URL("http://127.0.0.1:4723/");
                 DesiredCapabilities overridden = new DesiredCapabilities();
                 overridden.setCapability(Constants.PLATFORM_NAME, Platform.IOS);
                 overridden.setCapability(UDID, "YOUR_UDID");
